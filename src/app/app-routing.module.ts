@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'qr-scanner-data',
+    loadChildren: () => import('./modals/qr-scanner-data/qr-scanner-data.module').then( m => m.QrScannerDataPageModule)
+  },
 ];
 
 @NgModule({
